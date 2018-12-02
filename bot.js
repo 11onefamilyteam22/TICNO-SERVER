@@ -338,24 +338,7 @@ if (message.author.bot) return;
 });
 
 
-client.on('ready', function(){
-    client.user.setStatus("idle");
-    var ms = 100000 ;
-    var setGame = [`Bot Premium ${client.guilds.size} `,`f!invite Users ${client.users.size}`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],``);
-    }, ms);100000
 
-});
 
 
 client.on("message", message => {
@@ -1807,4 +1790,4 @@ client.on("message", (message) => {
 
 
 
-client.login('NTE3MzY5NzQzOTcyMjM3MzMy.DuQ0OQ.0Z9uRshI458eD7-t-p61oC0mMTE');
+client.login(process.env.TOKEN);// لا تغير فيها شيء
