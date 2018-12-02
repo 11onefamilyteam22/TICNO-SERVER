@@ -314,7 +314,7 @@ if (message.content.startsWith(prefix + 'perm')) {
 
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "invs")) {
+    if (message.content.startsWith(prefix + "رابط")) {
      if(!message.channel.guild) return;
 if (message.author.bot) return;
         message.channel.createInvite({
@@ -342,7 +342,7 @@ if (message.author.bot) return;
 
 
 client.on("message", message => {
- if (message.content === "$help$") {
+ if (message.content === "$مساعده") {
         message.react("😘")
            message.react("😵")
   const embed = new Discord.RichEmbed()
@@ -531,7 +531,7 @@ client.on('message',async message => {
          var duration;
          var gMembers;
          var filter = m => m.author.id === message.author.id;
-         if(message.content.startsWith(prefix + "giveaway")) {
+         if(message.content.startsWith(prefix + "قيف")) {
            if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
            message.channel.send(`:eight_pointed_black_star:| **من فضلك اكتب اسم الروم**`).then(msgg => {
              message.channel.awaitMessages(filter, {
@@ -650,7 +650,7 @@ client.on('message',async message => {
 
        client.on('message', message => {
           if(!message.channel.guild) return;
-       if(message.content.startsWith(prefix + 'clear')) {
+       if(message.content.startsWith(prefix + 'مسح')) {
        if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
        if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
        let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -707,7 +707,7 @@ client.on('message',async message => {
 
        client.on('message', message => {
        var prefix = "$";
-             if(message.content === prefix + "hchannel") {
+             if(message.content === prefix + "اقفل") {
              if(!message.channel.guild) return;
              if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply('You Dont Have Perms :x:');
                     message.channel.overwritePermissions(message.guild.id, {
@@ -720,7 +720,7 @@ client.on('message',async message => {
 
        client.on('message', message => {
        var prefix = "$";
-             if(message.content === prefix + "schannel") {
+             if(message.content === prefix + "افتح") {
              if(!message.channel.guild) return;
              if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply(':x:');
                     message.channel.overwritePermissions(message.guild.id, {
@@ -856,7 +856,7 @@ client.on('message',async message => {
 
        let args = message.content.split(" ").slice(1);
 
-       if (command == "kick") {
+       if (command == "كيك") {
                     if(!message.channel.guild) return message.reply('** This command only for servers**');
 
        if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("**You Don't Have ` KICK_MEMBERS ` Permission**");
@@ -885,6 +885,7 @@ client.on('message',async message => {
 
 
 
+
      client.on('message', message => {
        if (message.author.x5bz) return;
        if (!message.content.startsWith(prefix)) return;
@@ -894,7 +895,7 @@ client.on('message',async message => {
 
        let args = message.content.split(" ").slice(1);
 
-       if (command == "ban") {
+       if (command == "بان") {
                     if(!message.channel.guild) return message.reply('** This command only for servers**');
 
        if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
@@ -922,6 +923,7 @@ client.on('message',async message => {
        })
      }
      });
+
 
 
 
@@ -1019,7 +1021,7 @@ client.on('message',async message => {
 
               client.on('message', message => {
                            if(!message.channel.guild) return;
-                 if(message.content.startsWith(prefix + 'P1')) {
+                 if(message.content.startsWith(prefix + 'bc')) {
                  if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
                if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
                  let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -1236,7 +1238,7 @@ client.on('message', message => {
 
 client.on('message', function(message) {
     if(!message.channel.guild) return;
-    if(message.content === 'colors create') {
+    if(message.content === 'الالوان') {
     if(message.member.hasPermission('MANAGE_ROLES')) {
     setInterval(function(){})
     message.channel.send('Colors were created successfully | ▶️')
@@ -1247,7 +1249,7 @@ client.on('message', function(message) {
     });
 
     client.on('message', message=>{
-    if (message.content === 'colors create'){
+    if (message.content === 'الالوان'){
     if(!message.channel.guild) return;
     if (message.member.hasPermission('MANAGE_ROLES')){
     setInterval(function(){})
@@ -1607,7 +1609,7 @@ client.on('message', message => {
           if(msg.channel.type === "dm") return;
                var p = "#";
        if(msg.author.bot) return;
-       if(msg.content.startsWith(p + "setvoice")) {
+       if(msg.content.startsWith(p + "فويس-ساعه")) {
        if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **لا تملك رتبه لذلك**');
        if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
        var ggg= msg.guild.createChannel('SERVER STATS', 'category').then(kk => {
@@ -1668,7 +1670,7 @@ client.on('message', message => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("Team Thieves",{type: 'WATCHING'})
+     client.user.setActivity("Team Marleey STORE",{type: 'WATCHING'})
 
 });
 
