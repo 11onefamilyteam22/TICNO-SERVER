@@ -1768,7 +1768,32 @@ client.on("message", (message) => {
 
 
 
+client.on('message', msg => {
+  if (msg.content === 'السلام عليكم') {
+    msg.reply('وعليكم السلام ورحمه الله وبركاته');
+  }
+});
 
+
+client.on('message', msg => {
+  if (msg.content === 'باك') {
+    msg.reply('ولكم منور يا عسل');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'هلا') {
+    msg.reply('اهلا بك منور يا عسل ');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'برب') {
+    msg.reply('تيت لاططول عالينا يا عسل');
+  }
+});
 
 
 
